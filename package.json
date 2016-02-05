@@ -1,0 +1,14 @@
+{
+  "name": "react-todo-list",
+  "version": "1.0.0",
+  "description": "A simple todo list app built with React, Redux and Webpack",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kweiberth/react-todo-list.git"
+  },
+  "author": "Kurt Weiberth",
+  "license": "ISC",
+}

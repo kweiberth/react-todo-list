@@ -1,17 +1,12 @@
-var express = require('express');
-var path = require('path');
+const express = require('express');
+const path = require('path');
 
-var app = express();
+const app = express();
 
 app.use(express.static('./dist'));
 
-app.use('/', function (req, res) {
-    res.sendFile(path.resolve('client/index.html'));
-});
+app.use('/', (req, res, next) => res.sendFile(path.resolve('client/index.html')))
 
-var port = 3000;
+const port = 3000;
 
-app.listen(port, function(error) {
-  if (error) throw error;
-  console.log("Express server listening on port", port);
-});
+app.listen(port, error => error ? console.error(error) : console.log("Listing on port", port))

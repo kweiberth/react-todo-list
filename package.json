@@ -24,6 +24,7 @@
     "react-redux": "^4.4.5",
     "redux": "^3.6.0",
     "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.1.0",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.8.3",
     "webpack-hot-middleware": "^2.12.2"

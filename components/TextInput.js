@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import TextDisplay from './TextDisplay.js'
-import actions from '../redux/action.js'
 
 class TextInput extends Component {
 
@@ -26,21 +25,21 @@ class TextInput extends Component {
   handleSubmit (event) {
     event.preventDefault()
     console.log('submit button clicked')
-    this.props.dispatch(actions.addTodo(this.state.inputText))
+    this.props.addTodo(this.state.inputText)
   }
 
   render () {
     return (
       <div>
-        <input
-          type='text'
-          placeholder='What is your focus today?'
-          value={this.state.inputText}
-          onChange={this.handleChange.bind(this)} />
-        {/*<TextDisplay text={this.state.inputText} deleteLetter={this.deleteLetter.bind(this)} />*/}
-        <button onClick={this.handleSubmit.bind(this)}>
-          Submit
-        </button>
+        <form onSubmit={this.handleSubmit.bind(this)}>
+          <input
+            type='text'
+            placeholder='What is your focus today?'
+            value={this.state.inputText}
+            onChange={this.handleChange.bind(this)} />
+          {/*<TextDisplay text={this.state.inputText} deleteLetter={this.deleteLetter.bind(this)} />*/}
+          <input type='submit' text='Submit' />
+        </form>
       </div>
     )
   }

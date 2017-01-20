@@ -4,7 +4,7 @@ import ToDoList from './ToDoList'
 import UserInfo from './UserInfo'
 import { connect } from 'react-redux'
 import { bindActionCreators} from 'redux'
-import actions from '../actions/actions'
+import actions from '../actions'
 
 class App extends Component {
 

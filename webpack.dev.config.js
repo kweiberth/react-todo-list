@@ -2,11 +2,11 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'inline-source-map',
-  entry: './index.js',
+  entry: './src/index.js',
   output: {
     path: require('path').resolve('./dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: 'src/'
   },
   module: {
     loaders: [{

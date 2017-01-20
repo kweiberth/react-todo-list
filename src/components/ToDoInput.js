@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import actions from '../actions/actions'
 
 class ToDoInput extends Component{
 

@@ -30,6 +30,22 @@ let actions = {
         id: Math.floor(Math.random()*100) + 1
       }
     }
+  },
+  createNewUserIdIfOdd: function(){
+    return (dispatch, getState) => {
+      const { user } = getState();
+      if (user.id % 2 === 0){
+        return
+      }
+      dispatch(actions.createNewUserId())
+    }
+  },
+  createNewUserIdAsync: function(){
+    return (dispatch) => {
+      setTimeout(() => {
+        dispatch(actions.createNewUserId())
+      }, 2500)
+    }
   }
 }
 

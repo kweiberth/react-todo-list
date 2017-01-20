@@ -15,6 +15,20 @@ export default function reducer(state, action){
           completed: false
         }, ...state.todos]
       })
+    case 'COMPLETE_TODO':
+      return Object.assign({}, state, {
+        todos: state.todos.map((todo) => {
+          return todo.id === action.data.id
+            ? Object.assign({}, todo, {completed: true})
+            : todo
+        })
+      })
+    case 'DELETE_TODO':
+    return Object.assign({}, state, {
+      todos: state.todos.filter((todo) => {
+        return todo.id !== action.data.id
+      })
+    })
     default:
       return state
   }

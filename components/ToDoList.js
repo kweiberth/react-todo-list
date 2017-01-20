@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ToDoItem from './ToDoItem'
 
 class ToDoList extends Component{
 
@@ -7,7 +8,7 @@ class ToDoList extends Component{
       <ul>
         {
           this.props.todos.map((todo) => {
-            return <li key={todo.id}>{todo.text}</li>
+            return <ToDoItem actions={this.props.actions} key={todo.id} todo={todo} />
           })
         }
       </ul>

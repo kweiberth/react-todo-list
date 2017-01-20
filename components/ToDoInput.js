@@ -18,16 +18,15 @@ class ToDoInput extends Component{
 
   handleSubmit(event){
     event.preventDefault()
-    this.props.dispatch(actions.addTodo(this.state.inputText))
-
+    this.props.addTodo(this.state.inputText)
   }
 
   render(){
     return (
-      <div>
+      <form onSubmit={this.handleSubmit.bind(this)}>
         <input type="text" placeholder="I need to..." value={this.state.inputText} onChange={this.handleChange.bind(this)}/>
-        <button onClick={this.handleSubmit.bind(this)}>Submit</button>
-      </div>
+        <input type="submit" text="Submit"/>
+      </form>
     )
   }
 

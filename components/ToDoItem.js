@@ -4,7 +4,7 @@ import actions from '../actions/actions'
 class ToDoItem extends Component{
 
   handleComplete(){
-    this.props.action.comepleteTodo(this.props.todo.id)
+    this.props.actions.completeTodo(this.props.todo.id)
   }
 
   handleDelete(){

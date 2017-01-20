@@ -22,6 +22,14 @@ let actions = {
         id: id
       }
     }
+  },
+  createNewUserId: function(){
+    return {
+      type: 'CREATE_USER_ID',
+      data: {
+        id: Math.floor(Math.random()*100) + 1
+      }
+    }
   }
 }
 

@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import ToDosContainer from '../../container/toDoList/toDos'
-import AddToDoContainer from '../../container/toDoList/addToDo'
+import React, { Component } from 'react';
+import ToDosContainer from '../../container/toDoList/toDos';
+import AddToDoContainer from '../../container/toDoList/addToDo';
 
 class ToDoList extends Component{
   render(){
@@ -10,8 +10,8 @@ class ToDoList extends Component{
         <ToDosContainer />
         <AddToDoContainer />
       </div>
-    )
+    );
   }
 }
 
-export default ToDoList
+export default ToDoList;

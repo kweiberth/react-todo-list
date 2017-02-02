@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react';
 
 class AddToDo extends Component{
   render(){
@@ -7,7 +7,7 @@ class AddToDo extends Component{
         <input type="text" value={this.props.value} onChange={this.props.onTextInput}/>
         <input type="submit" value="Add" onClick={this.handleClick}/>
       </form>
-    )
+    );
   }
 }
 
@@ -15,6 +15,6 @@ AddToDo.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   onTextInput: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired
-}
+};
 
-export default AddToDo
+export default AddToDo;

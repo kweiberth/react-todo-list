@@ -1,4 +1,4 @@
-import actionConstants from '../constants/action_constants'
+import actionConstants from '../constants/action_constants';
 
 export function addToDo(text){
   return {
@@ -6,7 +6,7 @@ export function addToDo(text){
     data: {
       text: text
     }
-  }
+  };
 }
 
 export function deleteToDo(id){
@@ -15,5 +15,5 @@ export function deleteToDo(id){
     data: {
       id: id
     }
-  }
+  };
 }

@@ -1,11 +1,11 @@
-import actionConstants from '../constants/action_constants'
+import actionConstants from '../constants/action_constants';
 
 export function logoutUser(){
   return {
     type: actionConstants.LOGOUT_USER,
     data: {
     }
-  }
+  };
 }
 
 export function loginUser(username){
@@ -14,5 +14,5 @@ export function loginUser(username){
     data: {
       username: username
     }
-  }
+  };
 }

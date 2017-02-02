@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import ToDoList from './presentation/toDoList/index'
-import UserContainer from './container/user/index'
+import React, { Component } from 'react';
+import ToDoList from './presentation/toDoList/index';
+import UserContainer from './container/user/index';
 
 class App extends Component {
   render(){
@@ -9,8 +9,8 @@ class App extends Component {
         <UserContainer />
         <ToDoList />
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

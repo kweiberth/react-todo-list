@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import User from '../../presentation/user/index.js'
-import * as userActions from '../../../actionCreators/user_action_creator'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import User from '../../presentation/user/index.js';
+import * as userActions from '../../../actionCreators/user_action_creator';
 
 class UserContainer extends Component{
   constructor(props){
-    super(props)
+    super(props);
     this.state = {
       newUsername: ''
-    }
+    };
   }
 
   _onNewUsernameChange = (event) =>{
@@ -24,20 +24,23 @@ class UserContainer extends Component{
   render(){
     return(
       <User
+        isLoggedIn={this.props.isLoggedIn}
         onLogout={this.props.logout}
         onLogin={this._onLogin}
         username={this.props.user.username}
         newUsername={this.state.newUsername}
         onNewUsernameChange={this._onNewUsernameChange} />
-    )
+    );
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    user: state.user
-  }
-}
+    user: state.user,
+    //Moved this hear as it could be moved out to a selector
+    isLoggedIn: !!state.user.username
+  };
+};
 
 const mapActionCreatorsToProps = (dispatch) => {
   return {
@@ -47,7 +50,7 @@ const mapActionCreatorsToProps = (dispatch) => {
     login: (username) => {
       dispatch(userActions.loginUser(username));
     }
-  }
-}
+  };
+};
 
-export default connect(mapStateToProps, mapActionCreatorsToProps)(UserContainer)
+export default connect(mapStateToProps, mapActionCreatorsToProps)(UserContainer);

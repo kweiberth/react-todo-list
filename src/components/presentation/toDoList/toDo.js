@@ -1,9 +1,9 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react';
 
 class ToDo extends Component{
 
   render(){
-    let _style = this.props.completed ? 'green' : 'red'
+    let _style = this.props.completed ? 'green' : 'red';
 
     return(
       <tr>
@@ -16,7 +16,7 @@ class ToDo extends Component{
           <input type="button" value="Delete" onClick={this.props.onDelete} />
         </td>
       </tr>
-    )
+    );
   }
 }
 
@@ -25,6 +25,6 @@ ToDo.propTypes = {
   onDelete: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired
-}
+};
 
-export default ToDo
+export default ToDo;

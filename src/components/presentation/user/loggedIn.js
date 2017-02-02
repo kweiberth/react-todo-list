@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react';
 
 class LoggedIn extends Component{
   render(){
@@ -7,13 +7,13 @@ class LoggedIn extends Component{
         Welcome {this.props.username}!
         <input type="button" value="Logout" onClick={this.props.onLogout}/>
       </div>
-    )
+    );
   }
 }
 
 LoggedIn.propTypes = {
   onLogout: PropTypes.func.isRequired,
   username: PropTypes.string.isRequired
-}
+};
 
-export default LoggedIn
+export default LoggedIn;

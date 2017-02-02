@@ -4,6 +4,6 @@ let actionConstants = {
   DELETE_TODO: 'DELETE_TODO',
   LOGOUT_USER: 'LOGOUT_USER',
   LOGIN_USER: 'LOGIN_USER'
-}
+};
 
-export default actionConstants
+export default actionConstants;

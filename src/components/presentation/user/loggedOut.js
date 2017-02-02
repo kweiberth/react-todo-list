@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react';
 
 class LoggedOut extends Component{
   render(){
@@ -12,7 +12,7 @@ class LoggedOut extends Component{
         <input type="submit" value="Login"/>
       </form>
 
-    )
+    );
   }
 }
 
@@ -20,6 +20,6 @@ LoggedOut.propTypes = {
   onLogin: PropTypes.func.isRequired,
   onNewUsernameChange: PropTypes.func.isRequired,
   newUsername: PropTypes.string.isRequired
-}
+};
 
-export default LoggedOut
+export default LoggedOut;

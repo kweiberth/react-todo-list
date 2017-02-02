@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: require('path').resolve('./dist'),
     filename: 'bundle.js',
-    publicPath: 'src/'
+    publicPath: '/'
   },
   module: {
     loaders: [{
@@ -14,7 +14,8 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
-        presets: ['react', 'es2015', 'react-hmre']
+        presets: ['react', 'es2015', 'react-hmre'],
+        plugins: ["transform-class-properties"]
       }
     }]
   }

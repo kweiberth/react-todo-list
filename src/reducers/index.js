@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import todosReducer from './todosReducer'
+import toDosReducer from './toDosReducer'
 import userReducer from './userReducer'
 
 const reducer = combineReducers({
-  todos: todosReducer,
+  todos: toDosReducer,
   user: userReducer,
 })
 

@@ -1,10 +1,16 @@
-export default function userReducer(user = {username: 'airzy', id: 91}, action){
+import actionConstants from '../constants/action_constants'
+
+export default function userReducer(user = {username: 'airzy'}, action){
 
   switch(action.type){
-    case 'CREATE_USER_ID':
-      return Object.assign({}, user, {
-          id: action.data.id
-        })
+
+    case actionConstants.LOGOUT_USER:
+      return {}
+
+    case actionConstants.LOGIN_USER:
+      return {
+        username: action.data.username
+      }
 
     default:
       return user

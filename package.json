@@ -4,7 +4,7 @@
   "description": "A simple todo list app built with React, Redux and Webpack",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon server/server.js"
+    "serve": "nodemon server/server.js --ignore components"
   },
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "author": "Kurt Weiberth",
   "license": "ISC",
-"dependencies": {
+  "dependencies": {
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.2",
     "babel-preset-es2015": "^6.3.13",
@@ -35,3 +35,4 @@
     "eslint-plugin-standard": "^2.0.1"
   }
 }
+

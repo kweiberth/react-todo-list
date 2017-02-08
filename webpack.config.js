@@ -3,8 +3,8 @@ var webpack = require('webpack');
 module.exports = {
 	devtool: 'inline-source-map',
 	entry: [
-	'webpack-hot-middleware/client',
-	'./client/client.js'
+		'webpack-hot-middleware/client',
+		'./client/client.js'
 	],
 	output: {
 		path: require('path').resolve('./dist'),
@@ -17,16 +17,14 @@ module.exports = {
 		new webpack.NoErrorsPlugin()
 	],
 	module: {
-		loaders: [
-			{
-				test: /\.js$/,
-				loader: 'babel-loader',
-				exclude: /node_modules/,
-				query: {
-					presets: ['react', 'es2015', 'react-hmre']
-				}
+		loaders: [{
+			test: /\.js$/,
+			loader: 'babel-loader',
+			exclude: /node_modules/,
+			query: {
+				presets: ['react', 'es2015', 'react-hmre']
 			}
-		]		
+		}]
 	}
 
 }

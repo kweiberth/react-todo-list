@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
+import TextInput from './TextInput'
 
 class App extends Component {
 
   render() {
-    return <div>This is definitely a hot (module reloading) React app now!</div>
+    return (
+      <div>
+        <h1>This is the App Component</h1>
+        <TextInput/>
+      </div>
+    )
   }
-
 }
 
 export default App

@@ -9,6 +9,7 @@ class TodoInput extends Component {
       inputText: ''
     }
   }
+
   handleChange(event){
     this.setState({inputText: event.target.value})
   }

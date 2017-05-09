@@ -16,6 +16,21 @@ let reducer = function (state, action) {
           id: getId(state)
         }, ...state.todos]
       })
+      case 'COMPLETE_TODO':
+      console.log('COMPLETE_TODO');
+      return Object.assign({}, state, {
+        todos: state.todos.map((todo) => {
+          return todo.id === action.id ?
+            Object.assign({}, todo, {completed: !todo.completed}) : todo
+        })
+      })
+      case 'DELETE_TODO':
+      console.log('DELETE_TODO');
+      return Object.assign({}, state, {
+        todos: state.todos.filter((todo) => {
+            return todo.id !== action.id
+        })
+      })
     default:
     return state;
   }
